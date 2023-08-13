@@ -8,13 +8,13 @@ import { useState } from "react";
 
 export const EmployeeList = () => {
  
-  const [employee, setEmployee] = useState([])
+  const [employees, setEmployees] = useState([])
 
   function getEmployeeList(){
     fetch("https://one0-2-vet-api.onrender.com/api/employees")
     .then ((data) => (data.json()))
     .then((json) => {
-      setEmployee(json)
+      setEmployees(json)
     })
     .catch((error) => {
       console.log(error);
@@ -25,15 +25,19 @@ export const EmployeeList = () => {
     getEmployeeList()
   }, [])
 
-  console.log(employee)
-  return (
+  console.log(employees)
+
+
+return (
     <main>
       <h2>All Staff</h2>
       <section className="employee-list">
-        <Employee />
+        {employees.map((employee) => {
+          return <Employee employee={employee}/>;
+        })}
       </section>
     </main>
   );
-};
+  }
 
 export default EmployeeList;
