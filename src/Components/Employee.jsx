@@ -39,7 +39,7 @@ if (employee.postfix){
     <article className="employee">
       <h3>{getFullName(employee)}</h3>
       <h4>{employee.title}</h4>
-    <button id={pets.employeeId} onClick={handleClick}>Show Pets</button>
+    <button  onClick={handleClick}>Show Pets</button>
       <PetList matchPets={matchPets} pets={pets} 
       employee={employee}/>
     </article>
