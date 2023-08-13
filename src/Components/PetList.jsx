@@ -4,6 +4,9 @@ import React from "react";
 
 export const PetList = ({pets, matchPets, employee}) => {
 
+
+
+
   function getPets(employee, pets) {
     const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
      if (matchedPets.length > 0) {
@@ -11,8 +14,9 @@ export const PetList = ({pets, matchPets, employee}) => {
      } else {
        return (
         <aside className="pets-list">
-       <p>No pets listed for this employee.</p>
+       <p> No pets listed for this employee.</p>
        </aside>
+
      )}
    }
   }
