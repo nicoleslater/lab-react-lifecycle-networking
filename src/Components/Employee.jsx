@@ -6,7 +6,7 @@ export const Employee = ({employee, pet}) => {
   function matchPets(employee, pets) {
     const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
 
-    console.log(matchedPets)
+    // console.log(matchedPets)
 
     return (
       <div>
@@ -16,6 +16,9 @@ export const Employee = ({employee, pet}) => {
       </div>
     )
   }
+
+  function handleClick(){
+      setShowPets(!showPets)
 
 function getFullName (employee){
 if (employee.prefix){
@@ -35,12 +38,12 @@ if (employee.postfix){
     <article className="employee">
       <h3>{getFullName(employee)}</h3>
       <h4>{employee.title}</h4>
-    
-<button onClick={() => matchPets(employee, pets)}>Show Pets</button>
+    <button onClick={handleClick}>Show Pets</button>
       <PetList matchPets={matchPets} pets={pets} 
       employee={employee}/>
     </article>
   );
 };
+}
 
 export default Employee;
