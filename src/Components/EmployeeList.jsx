@@ -26,6 +26,7 @@ export const EmployeeList = () => {
   }, [])
 
   console.log(employees)
+  console.log(employees.id)
 
 
 return (
@@ -33,7 +34,9 @@ return (
       <h2>All Staff</h2>
       <section className="employee-list">
         {employees.map((employee) => {
-          return <Employee employee={employee}/>;
+          return <Employee 
+          key={employee.id}
+          employee={employee}/>;
         })}
       </section>
     </main>

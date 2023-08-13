@@ -25,6 +25,8 @@ export const PetList = () => {
   }, [])
   console.log(pet)
 
+  console.log(pet.id)
+
   return (
     <aside className="pets-list">
       <p>No pets listed for this employee.</p>

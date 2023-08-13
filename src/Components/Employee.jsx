@@ -3,6 +3,12 @@ import "./Employee.css";
 
 export const Employee = ({employee}) => {
 
+  function matchPet(){
+    if (employee.id === pet.id){
+      return `${pet}`
+    }
+  }
+
 function getFullName (employee){
 if (employee.prefix){
   return `${employee.prefix} ${employee.firstName} ${employee.lastName}`
