@@ -2,6 +2,12 @@ import PetList from "./PetList";
 import "./Employee.css";
 
 export const Employee = () => {
+  // const [newEmployee, setNewEmployee] = useState([])
+
+  // function getNewEmployee(){
+
+  // }
+
   return (
     <article className="employee">
       <h3>Staff Member Name</h3>
