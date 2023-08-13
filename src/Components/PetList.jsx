@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 
-export const PetList = ({pets, employee}) => {
-  
+
+export const PetList = ({pets, matchPets, employee}) => {
+
   function getPets(employee, pets) {
     const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
      if (matchedPets.length > 0) {
