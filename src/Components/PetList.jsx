@@ -25,9 +25,9 @@ export const PetList = () => {
   useEffect(() => {
     getPetList()
   }, [])
-  console.log(pet)
+  // console.log(pet)
 
-  console.log(pet.employeeId)
+  // console.log(pet.employeeId)
 
   return (
     <aside className="pets-list">
