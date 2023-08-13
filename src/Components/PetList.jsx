@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 
 
-
-
-
-
 export const PetList = ({pets, employee}) => {
 
   

@@ -36,7 +36,7 @@ if (employee.postfix){
       <h3>{getFullName(employee)}</h3>
       <h4>{employee.title}</h4>
     
-<button onClick={() => matchPets(employee, pets)}>Show Pets</button>
+{/* <button onClick={() => matchPets(employee, pets)}>Show Pets</button> */}
       <PetList />
     </article>
   );
