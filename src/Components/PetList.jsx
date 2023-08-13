@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export const PetList = () => {
   const [pet, setPet] = useState([]);
+  // const []
 
   function getPetList(){
     fetch("https://one0-2-vet-api.onrender.com/api/pets")
