@@ -3,19 +3,19 @@ import "./Employee.css";
 
 export const Employee = ({employee, pet}) => {
 
-  // function matchPets(employee, pets) {
-  //   const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
+  function matchPets(employee, pets) {
+    const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
 
-  //   console.log(matchedPets)
+    console.log(matchedPets)
 
-  //   return (
-  //     <div>
-  //     {matchedPets.map((pet) => {
-  //       return <>{pet.name}</>
-  //     })}
-  //     </div>
-  //   )
-  // }
+    return (
+      <div>
+      {matchedPets.map((pet) => {
+        return <>{pet.name}</>
+      })}
+      </div>
+    )
+  }
 
 function getFullName (employee){
 if (employee.prefix){
@@ -37,7 +37,8 @@ if (employee.postfix){
       <h4>{employee.title}</h4>
     
 <button onClick={() => matchPets(employee, pets)}>Show Pets</button>
-      <PetList />
+      <PetList matchPets={matchPets} pets={pets} 
+      employee={employee}/>
     </article>
   );
 };

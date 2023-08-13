@@ -25,8 +25,8 @@ export const EmployeeList = ({pet}) => {
     getEmployeeList()
   }, [])
 
-  console.log(employees)
-  console.log(employees.id)
+  // console.log(employees)
+  // console.log(employees.id)
 
 
 return (
