@@ -13,7 +13,7 @@ function getPetList(){
       setPets(json)
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
     });
   }
 
