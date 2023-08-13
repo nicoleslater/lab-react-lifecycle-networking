@@ -1,13 +1,21 @@
 import PetList from "./PetList";
 import "./Employee.css";
 
-export const Employee = ({employee}) => {
+export const Employee = ({employee, pet}) => {
 
-  function matchPet(){
-    if (employee.id === pet.id){
-      return `${pet}`
-    }
-  }
+  // function matchPets(employee, pets) {
+  //   const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
+
+  //   console.log(matchedPets)
+
+  //   return (
+  //     <div>
+  //     {matchedPets.map((pet) => {
+  //       return <>{pet.name}</>
+  //     })}
+  //     </div>
+  //   )
+  // }
 
 function getFullName (employee){
 if (employee.prefix){
@@ -27,7 +35,8 @@ if (employee.postfix){
     <article className="employee">
       <h3>{getFullName(employee)}</h3>
       <h4>{employee.title}</h4>
-      <button>Show Pets</button>
+    
+<button onClick={() => matchPets(employee, pets)}>Show Pets</button>
       <PetList />
     </article>
   );

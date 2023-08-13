@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 
-export const EmployeeList = () => {
+export const EmployeeList = ({pet}) => {
  
   const [employees, setEmployees] = useState([])
 
@@ -36,7 +36,8 @@ return (
         {employees.map((employee) => {
           return <Employee 
           key={employee.id}
-          employee={employee}/>;
+          employee={employee}
+          pet={pet}/>;
         })}
       </section>
     </main>
