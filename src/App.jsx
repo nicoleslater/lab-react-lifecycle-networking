@@ -11,7 +11,7 @@ function App () {
     fetch("https://one0-2-vet-api.onrender.com/api/pets")
     .then ((data) => (data.json()))
     .then((json) => {
-      setPet(json)
+      setPets(json)
     })
     .catch((error) => {
       console.log(error);

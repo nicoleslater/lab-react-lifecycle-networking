@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
 
 
 
 
 
-export const PetList = () => {
+
+export const PetList = ({pets, employee}) => {
+
+  
+  
  
-
-
-
-
-  function getPetList(){
+function getPetList(){
     fetch("https://one0-2-vet-api.onrender.com/api/pets")
     .then ((data) => (data.json()))
     .then((json) => {
