@@ -17,17 +17,13 @@ export const Employee = ({employee, pets, getPetList}) => {
     }
   }
 
+  function matchPets(employee, pets) {
+    const matchedPets = pets.filter((pet) => pet.employeeId === employee.id);
 
-  function matchPets (employee, pets) {
-    const matchedPets = pets.filter((pet) => pet.employeeId === employee.id)
+    const petNames = matchedPets.map((pet) => pet.name);
+    const petNamesJoined = petNames.join(', ');
 
-    return (
-      <div>
-      {matchedPets.map((pet) => {
-        return <> {pet.name} </>
-      })}
-      </div>
-    )
+    return <div>{petNamesJoined}</div>;
   }
 
 
