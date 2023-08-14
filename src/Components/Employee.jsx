@@ -24,7 +24,7 @@ export const Employee = ({employee, pets, getPetList}) => {
     return (
       <div>
       {matchedPets.map((pet) => {
-        return <>{pet.name}</>
+        return <> {pet.name} </>
       })}
       </div>
     )
@@ -39,10 +39,14 @@ export const Employee = ({employee, pets, getPetList}) => {
     <article className="employee">
       <h3>{getFullName(employee)}</h3>
       <h4>{employee.title}</h4>
+
       <button onClick={handleClick}>Show Pets</button>
       
       {showPets && (
-        <PetList matchPets={matchPets} pets={pets} employee={employee} />
+        <PetList 
+        matchPets={matchPets} 
+        pets={pets} 
+        employee={employee} />
       )}
       
     </article>
